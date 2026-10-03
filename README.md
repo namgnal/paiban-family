@@ -1,23 +1,23 @@
-# 牌伴 · 家庭版
+# 牌伴
 
-手机优先的家庭麻将记牌与决策参考工具。作者：[namgnal](https://github.com/namgnal)。
+手机优先的麻将记牌与决策参考工具。作者：[namgnal](https://github.com/namgnal)。
 
 **[在线试用](https://paiban-family.pages.dev/)** · **[反馈问题](https://github.com/namgnal/paiban-family/issues)** · **[作者主页](https://github.com/namgnal)**
 
 如果牌伴对你有帮助，欢迎给仓库点一个 **Star**，或者带着具体牌例来提建议。无需登录即可使用网页；Star 完全自愿。
 
-<img src="docs/images/mobile-preview.jpg" width="360" alt="牌伴家庭版手机界面：手牌、记牌操作与出牌建议">
+<img src="docs/images/mobile-preview.jpg" width="360" alt="牌伴手机界面：手牌、记牌操作与出牌建议">
 
 ## 这个版本做什么
 
 从开局完整记录自己的手牌和各家公开操作，提供出牌、吃碰杠等建议，支持撤销纠错。界面、计算与存档都在当前设备上，不调用云端 AI，不上传牌局。
 
 - 独立吃、碰、杠、胡入口，双击建议牌快速记录出牌。
-- 普通胡、小七对、清一色、家庭十三烂，以及本项目约定的积分规则。
+- 普通胡、小七对、清一色、十三烂，以及本项目约定的积分规则。
 - 展示未见张数、本局积分流水；支持 JSON 文件和文字备份导入导出。
 - PWA 离线缓存，首次通过 HTTPS 完整加载后可添加到手机主屏幕。
 
-**这是特定家庭规则的小版本，不是通用麻将裁判。** 不包含日麻、四川、南昌等其他规则。具体范围见[家庭规则](docs/rules.md)。建议采用启发式策略，不是真实胜率、精确积分期望，也不保证实桌收益，详见[算法与边界](docs/algorithm.md)。
+内置一组可配置的[默认规则](docs/rules.md)，可在“规则”页调整牌型开关和计分倍率。具体牌型、结算方式与尚未支持的操作见规则文档。建议采用启发式策略，不是真实胜率、精确积分期望，也不保证实桌收益，详见[算法与边界](docs/algorithm.md)。
 
 ## 手机使用
 
@@ -57,7 +57,7 @@ npm start
 
 | 目录或文件 | 内容 |
 | --- | --- |
-| `src/game.js`、`src/rules.js` | 牌局状态与家庭规则结算 |
+| `src/game.js`、`src/rules.js` | 牌局状态与积分结算 |
 | `src/hand.js`、`src/advisor.js` | 牌型、牌效适配与启发式建议 |
 | `src/main.js`、`src/style.css` | 手机界面与交互 |
 | `src/worker.js` | 在 Worker 中执行计算 |
@@ -66,7 +66,7 @@ npm start
 
 ## 来源与许可
 
-普通向听计算复用 [kobalab/majiang-core 1.4.1](https://github.com/kobalab/majiang-core/tree/v1.4.1)，其 MIT 许可和作者声明保留在 [第三方声明](public/third-party-notices.txt)。家规适配、记牌状态、界面和建议排序见本仓库实现。
+普通向听计算复用 [kobalab/majiang-core 1.4.1](https://github.com/kobalab/majiang-core/tree/v1.4.1)，其 MIT 许可和作者声明保留在 [第三方声明](public/third-party-notices.txt)。规则适配、记牌状态、界面和建议排序见本仓库实现。
 
 本项目采用 [MIT 许可证](LICENSE)，Copyright (c) 2026 namgnal。使用、修改和分发时请遵守 MIT 及所用第三方组件的许可要求。
 

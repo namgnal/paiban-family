@@ -6,7 +6,7 @@ export const HELP_CONTENT = {
   },
   about: {
     title: '关于牌伴',
-    body: '<section class="project-about"><div class="about-identity"><img src="./icon.svg" alt="" width="48" height="48"><div><h3>牌伴 <span>家庭版</span></h3><span class="about-version">v0.1.3</span></div></div><p class="about-description">面向家庭规则的麻将记牌与决策参考。</p><div class="about-author"><span>设计与开发</span><a href="https://github.com/namgnal" target="_blank" rel="noopener noreferrer">namgnal <span aria-hidden="true">↗</span></a></div><a class="about-github" href="https://github.com/namgnal/paiban-family" target="_blank" rel="noopener noreferrer">查看 GitHub 项目 <span aria-hidden="true">↗</span></a><p class="about-star">觉得有帮助，欢迎在 GitHub 点个 Star。</p><details class="about-credits"><summary>实现与致谢</summary><p>普通牌效计算基于 @kobalab/majiang-core 1.4.1（MIT）。</p><p><a href="./license.txt" target="_blank" rel="noopener noreferrer">项目许可 · MIT</a> · <a href="./third-party-notices.txt" target="_blank" rel="noopener noreferrer">第三方许可</a></p></details><p class="about-copyright">© 2026 namgnal</p></section>',
+    body: '<section class="project-about"><div class="about-identity"><img src="./icon.svg" alt="" width="48" height="48"><div><h3>牌伴</h3><span class="about-version">v0.1.4</span></div></div><p class="about-description">麻将记牌与决策参考。</p><div class="about-author"><span>设计与开发</span><a href="https://github.com/namgnal" target="_blank" rel="noopener noreferrer">namgnal <span aria-hidden="true">↗</span></a></div><a class="about-github" href="https://github.com/namgnal/paiban-family" target="_blank" rel="noopener noreferrer">查看 GitHub 项目 <span aria-hidden="true">↗</span></a><p class="about-star">觉得有帮助，欢迎在 GitHub 点个 Star。</p><details class="about-credits"><summary>实现与致谢</summary><p>普通牌效计算基于 @kobalab/majiang-core 1.4.1（MIT）。</p><p><a href="./license.txt" target="_blank" rel="noopener noreferrer">项目许可 · MIT</a> · <a href="./third-party-notices.txt" target="_blank" rel="noopener noreferrer">第三方许可</a></p></details><p class="about-copyright">© 2026 namgnal</p></section>',
   },
   setup: {
     title: '录入起手牌',
@@ -22,7 +22,7 @@ export const HELP_CONTENT = {
   },
   advice: {
     title: '怎样看建议',
-    body: '<p><strong>当前为试验策略，尚未证明实桌长期净积分提升。</strong>建议比较牌效、特殊奖励、杠牌收益与公开危险信号，不能保证是最优解。</p><p>“距听牌”是结构上还差的步数。“有效牌”能推进手牌；旁边的数字是未见张数，可能在他家手中，不是真实摸牌概率。结构听牌也可能遇到所需牌已全部露出。</p><p>双击建议牌会记录出牌，单击只提示再次点击。建议不会自行推进牌局；当前合法胡牌默认建议收下。</p><details><summary>计算依据与开源许可</summary><p>普通向听计算复用 @kobalab/majiang-core 1.4.1（MIT），没有套用日麻计分或振听。七对、十三烂及家庭结算由本项目适配。</p><p>当前是启发式排序，尚无校准的对手手牌分布、完整净积分期望或跨局连庄价值模型。</p><a href="./third-party-notices.txt" target="_blank" rel="noopener">查看开源许可</a></details>',
+    body: '<p><strong>当前为试验策略，尚未证明实桌长期净积分提升。</strong>建议比较牌效、特殊奖励、杠牌收益与公开危险信号，不能保证是最优解。</p><p>“距听牌”是结构上还差的步数。“有效牌”能推进手牌；旁边的数字是未见张数，可能在他家手中，不是真实摸牌概率。结构听牌也可能遇到所需牌已全部露出。</p><p>双击建议牌会记录出牌，单击只提示再次点击。建议不会自行推进牌局；当前合法胡牌默认建议收下。</p><details><summary>计算依据与开源许可</summary><p>普通向听计算复用 @kobalab/majiang-core 1.4.1（MIT），没有套用日麻计分或振听。七对、十三烂及积分结算由本项目适配。</p><p>当前是启发式排序，尚无校准的对手手牌分布、完整净积分期望或跨局连庄价值模型。</p><a href="./third-party-notices.txt" target="_blank" rel="noopener">查看开源许可</a></details>',
   },
   history: {
     title: '记录与纠错',
@@ -30,7 +30,7 @@ export const HELP_CONTENT = {
   },
   rules: {
     title: '规则何时生效',
-    body: '<p>家庭牌组共136张：万、筒、条各1—9，东南西北中发白，每种4张，无花牌或万能牌。</p><p><strong>每局开局时锁定规则。</strong>这里的修改保存后只用于下一局，不重算当前牌局。每局由你指定庄家。</p><p>恢复默认后仍需点击保存。抢杠胡、一炮多响等尚未约定的规则，当前不能自动处理。</p>',
+    body: '<p>默认牌组共136张：万、筒、条各1—9，东南西北中发白，每种4张，无花牌或万能牌。</p><p><strong>每局开局时锁定规则。</strong>这里的修改保存后只用于下一局，不重算当前牌局。每局由你指定庄家。</p><p>恢复默认后仍需点击保存。抢杠胡、一炮多响等规则，当前尚未支持。</p>',
   },
   patterns: {
     title: '牌型与操作规则',
@@ -38,11 +38,11 @@ export const HELP_CONTENT = {
   },
   scoring: {
     title: '积分与倍率',
-    body: '<dl class="help-definitions"><dt>底分</dt><dd>对应家里说的基础“子”，界面统一用积分。调整底分，全部收付等比例改变。</dd><dt>庄家倍率</dt><dd>付款方或赢家是庄家时，相关收付乘此倍率。</dd><dt>点炮付款</dt><dd>点炮者按“点炮者付款倍率”付给赢家，另外两家各按“其余两家付款倍率”付款。</dd><dt>自摸付款</dt><dd>另外三家各按自摸倍率付款，再计庄家与特殊牌型奖励。</dd><dt>特殊牌型倍率</dt><dd>适用于小七对、清一色、十三烂。是否相乘由叠加开关决定。</dd><dt>杠牌付款</dt><dd>每家付底分×杠牌倍率，开杠者向另外三家收取；独立于庄家、特殊奖励和胡牌封顶。</dd><dt>单家封顶倍率</dt><dd>限制一次胡牌中每家付款相对底分的最高倍数；留空不封顶，不限制杠牌。</dd></dl>',
+    body: '<dl class="help-definitions"><dt>底分</dt><dd>计分的基础单位。调整底分，全部收付等比例改变。</dd><dt>庄家倍率</dt><dd>付款方或赢家是庄家时，相关收付乘此倍率。</dd><dt>点炮付款</dt><dd>点炮者按“点炮者付款倍率”付给赢家，另外两家各按“其余两家付款倍率”付款。</dd><dt>自摸付款</dt><dd>另外三家各按自摸倍率付款，再计庄家与特殊牌型奖励。</dd><dt>特殊牌型倍率</dt><dd>适用于小七对、清一色、十三烂。是否相乘由叠加开关决定。</dd><dt>杠牌付款</dt><dd>每家付底分×杠牌倍率，开杠者向另外三家收取；独立于庄家、特殊奖励和胡牌封顶。</dd><dt>单家封顶倍率</dt><dd>限制一次胡牌中每家付款相对底分的最高倍数；留空不封顶，不限制杠牌。</dd></dl>',
   },
   unsupported: {
     title: '尚未支持的规则',
-    body: '<p>抢杠胡、一炮多响、过手胡限制、流局罚分尚未约定或实现。每局手动指定庄家，不自动处理连庄奖励。</p><p>若实际遇到这些情况，请保留记录并按现场约定结算，不能直接按普通单人胡记录；应用无法据此给出可靠建议。</p>',
+    body: '<p>抢杠胡、一炮多响、过手胡限制、流局罚分尚未实现。每局手动指定庄家，不自动处理连庄奖励。</p><p>若实际遇到这些情况，请保留记录并按现场约定结算，不能直接按普通单人胡记录；应用无法据此给出可靠建议。</p>',
   },
   operations: {
     title: '怎样记录吃碰杠胡',

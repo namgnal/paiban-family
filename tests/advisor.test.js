@@ -31,7 +31,7 @@ test('吃碰策略包括不响应和后续弃牌；禁用吃碰会移除候选',
     for (const c of advice.candidates) assert.doesNotThrow(() => applyEvent(state, c.event));
   }
 });
-test('默认收下合法胡牌，展示家规积分而非伪造胜率', () => {
+test('默认收下合法胡牌，展示规则积分而非伪造胜率', () => {
   const state = startGame({ hand: parseHand('m112233p4455s6677'), dealer: 0 });
   const best = advise(state).candidates[0];
   assert.equal(best.action, 'win'); assert.equal(best.points, 24);

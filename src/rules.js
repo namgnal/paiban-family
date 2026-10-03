@@ -1,5 +1,5 @@
 export const DEFAULT_RULES = Object.freeze({
-  version: 1, name: '家庭麻将', base: 1,
+  version: 1, name: '默认规则', base: 1,
   allowChi: true, allowPeng: true, allowGang: true,
   sevenPairs: true, quadAsPairs: true, pureSuit: true, scattered: true,
   specialMultiplier: 2, stackSpecial: true, cap: null,

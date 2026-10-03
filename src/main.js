@@ -23,7 +23,7 @@ let advice = null, analysisId = 0, analysisBusy = false, analysisError = '', wor
 let modalActions = [], storageError = '', offlineReady = false, installPrompt;
 let boardExpanded = false;
 let swRegistration = null;
-try { config = loadRules(); } catch { storageError = '保存的规则无法读取，已载入默认家规。'; }
+try { config = loadRules(); } catch { storageError = '保存的规则无法读取，已载入默认规则。'; }
 try { const saved = loadRecord(); if (saved) ({ record, state } = saved); }
 catch { storageError = '上次牌局无法读取。原始记录仍保留在浏览器中，请先导出故障记录。'; }
 
@@ -117,7 +117,7 @@ function setupView() {
     <fieldset class="dealer-picker"><legend>这局谁坐庄？</legend>${SEATS.map((seat, id) => `<label><input type="radio" name="dealer" value="${id}" ${setup.dealer === id ? 'checked' : ''}><span>${seat}</span></label>`).join('')}</fieldset>
     <div class="section-heading"><h2>起手牌</h2><span>${setup.hand.length} / ${limit}</span></div><div class="hand setup-hand">${setup.hand.map((tile, index) => tileView(tile, { action: 'setup-remove', index, label: `移除${tileName(tile)}` })).join('')}${!setup.hand.length ? '<div class="empty-hand">从下方选牌</div>' : ''}</div>
     <button class="button primary wide" data-action="start" ${setup.hand.length !== limit ? 'disabled' : ''}>${setup.editing ? '确认起手牌，重新记录' : '开始这一局'}</button>${setup.editing ? '<button class="button text wide" data-action="cancel-setup">取消修改，返回原牌局</button>' : '<button class="button text wide" data-action="demo">先体验示例牌局 <span aria-hidden="true">↗</span></button>'}
-    <div class="setup-note"><span>${setup.editing ? '沿用本局规则' : '家庭规则'} · 底分 ${num(activeRules.base)}</span><button data-action="show-rules">查看规则</button></div></section>${keypad({ setupMode: true })}</main>`;
+    <div class="setup-note"><span>${setup.editing ? '沿用本局规则' : '默认规则'} · 底分 ${num(activeRules.base)}</span><button data-action="show-rules">查看规则</button></div></section>${keypad({ setupMode: true })}</main>`;
 }
 function playerCard(seat) {
   const player = state.players[seat];
